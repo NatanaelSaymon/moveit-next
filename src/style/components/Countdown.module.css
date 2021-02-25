@@ -72,5 +72,5 @@
 .countdownButton:disabled {
     background: var(--white);
     color: var(--text);
-    cursor: not-allowed;
+    cursor: not-allowed; /*Nao eh possivel clicar*/
 }

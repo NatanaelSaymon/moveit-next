@@ -2,7 +2,7 @@ import { createContext, useState, ReactNode } from 'react';
 
 import challenges from '../../challenges.json';
 
-interface Challegen {
+interface Challenge {
     type: 'body' | 'eye';
     description: string;
     amount: number;
@@ -13,29 +13,26 @@ interface ChallengesContextData {
     currentExperience: number;
     experienceToNextLevel: number;
     challengesCompleted: number;
-    activeChallenge: Challegen; 
+    activeChallenge: Challenge; 
     levelUp: () => void;
     startNewChallenge: () => void;
     resetChallenge: () => void;
+    completChallenge: () => void;
 }
 
-interface ChallengesPchildrenroviderProps {
+interface ChallengesProviderProps {
     children: ReactNode;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
-export function ChallengesProvider({ children }: ChallengesPchildrenroviderProps) {
+export function ChallengesProvider({ children }: ChallengesProviderProps) {
 
     const [level, setLevel] = useState(1);
-
     const [currentExperience, setCurrentExperience] = useState(0);
-
     const [challengesCompleted, setChallengesCompleted] = useState(0);
-
     const [activeChallenge, setActiveChallenge] = useState(null);
-
-    const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
+    const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
     function levelUp() {
         setLevel(level + 1);
@@ -52,6 +49,27 @@ export function ChallengesProvider({ children }: ChallengesPchildrenroviderProps
         setActiveChallenge(null)
     }
 
+    function completChallenge() {
+        if(!activeChallenge) {
+            return;
+        }
+
+        const { amount } = activeChallenge;
+
+        let finalExperience = currentExperience + amount;
+
+        if(finalExperience >= experienceToNextLevel) {
+
+            finalExperience = finalExperience - experienceToNextLevel;
+
+            levelUp();
+        }
+
+        setCurrentExperience(finalExperience);
+        setActiveChallenge(null);
+        setChallengesCompleted(challengesCompleted + 1);
+    }
+
     return (
         <ChallengesContext.Provider 
             value={{ 
@@ -63,6 +81,7 @@ export function ChallengesProvider({ children }: ChallengesPchildrenroviderProps
                 startNewChallenge,
                 activeChallenge,
                 resetChallenge,
+                completChallenge,
             }}
         >
             { children }

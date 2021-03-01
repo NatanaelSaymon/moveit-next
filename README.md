@@ -1,20 +1,58 @@
+<p align="center">
+<img src="./.github/logo.svg" />
+</p>
 
+<br>
 
 ## Sobre
 
-Move-it é um aplicativo para controle de produtividade alinhado a exercícios que melhoram sua qualidde de vida.
+Move-it é um aplicativo para controle de produtividade alinhado a exercícios que melhoram sua qualidade de vida. Desenvolvido com ReactJS e NextJS.
 
 - Timer para concentração.
+<div>
+    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/.github/img-01.png"/>
+</div>
+
+<br><br>
+
 - Desafios gerados cada timer concluido.
+<div>
+    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/.github/img-02.png"/>
+</div>
+
+<br><br>
+
 - Pontuação por cumprimento de meta.
+
+<div>
+    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/.github/img-03.png"/>
+</div>
+
+<br><br>
+
 - Classificação de level para objetivos concluidos.
 
+<div>
+    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/.github/img-modal.png"/>
+</div>
+
+<br><br>
+
+- A cada 25 minutos, você receberá uma notificação avisando que um novo desafio esta disponrivel.
+
+<div align="center">
+    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/.github/img-notificacao.png" />
+</div>
+
+<br><br>
 ## Tecnologias Usadas
 
 - ReactJS
 - NextJS
 - TypeScript
 - js-cookie
+
+<br>
 
 ## Como usar ?
 
@@ -35,27 +73,8 @@ yarn dev
 - Entrar pelo navegador [http://localhost:3000](http://localhost:3000) para ver o resultado.
 
 
-<div>
-    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/public/image/img-01.png"/>
-</div>
-
-<div>
-    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/public/image/img-02.png"/>
-</div>
-
-<div>
-    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/public/image/img-03.png"/>
-</div>
-
-<div>
-    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/public/image/img-modal.png"/>
-</div>
-
-
-<div>
-    <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/public/image/img-notificacao.png" />
-</div>
-
+<br>
+<br>
 
 Semana de aula disponibilizada pela [Rocketseat](https://rocketseat.com.br/)
 

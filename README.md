@@ -8,6 +8,8 @@
 
 Move-it é um aplicativo para controle de produtividade alinhado a exercícios que melhoram sua qualidade de vida. Desenvolvido com ReactJS e NextJS.
 
+Link da aplicação [Move-it](https://moveit-next-sooty.vercel.app)
+
 - Timer para concentração.
 <div>
     <img src="https://raw.githubusercontent.com/NatanaelSaymon/moveit-next/main/.github/img-01.png"/>
